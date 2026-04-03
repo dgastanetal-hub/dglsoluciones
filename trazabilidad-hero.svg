@@ -1,0 +1,86 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Panel de trazabilidad logística</title>
+  <desc id="desc">Ilustración panorámica con nodos conectados para representar trazabilidad end-to-end desde origen hasta entrega.</desc>
+  <defs>
+    <linearGradient id="bg" x1="80" y1="40" x2="1120" y2="380" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#13213B"/>
+    </linearGradient>
+    <linearGradient id="line" x1="180" y1="208" x2="1010" y2="208" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F59E0B"/>
+      <stop offset="0.55" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#22C55E"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="10" y="10" width="1180" height="400" rx="28" fill="url(#bg)"/>
+  <rect x="28" y="28" width="1144" height="364" rx="24" stroke="rgba(255,255,255,0.08)" stroke-opacity="0.18"/>
+
+  <path d="M150 250C245 232 275 144 376 144C472 144 515 260 616 260C718 260 745 116 852 116C935 116 988 186 1050 186"
+        stroke="url(#line)" stroke-width="10" stroke-linecap="round" stroke-dasharray="1 22"/>
+  <path d="M150 250C245 232 275 144 376 144C472 144 515 260 616 260C718 260 745 116 852 116C935 116 988 186 1050 186"
+        stroke="url(#line)" stroke-opacity="0.35" stroke-width="22" stroke-linecap="round" filter="url(#glow)"/>
+
+  <g>
+    <circle cx="160" cy="250" r="34" fill="#0B1220" stroke="#F59E0B" stroke-width="4"/>
+    <path d="M148 260V234H174V260M144 234L161 220L178 234" stroke="#FBBF24" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="160" y="305" text-anchor="middle" fill="#F8FAFC" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="18" font-weight="700">Origen</text>
+  </g>
+
+  <g>
+    <circle cx="380" cy="144" r="34" fill="#0B1220" stroke="#60A5FA" stroke-width="4"/>
+    <rect x="358" y="124" width="44" height="32" rx="4" stroke="#93C5FD" stroke-width="4"/>
+    <path d="M369 156V124M391 156V124M358 138H402" stroke="#93C5FD" stroke-width="4"/>
+    <text x="380" y="199" text-anchor="middle" fill="#F8FAFC" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="18" font-weight="700">Almacén</text>
+  </g>
+
+  <g>
+    <circle cx="618" cy="260" r="34" fill="#0B1220" stroke="#38BDF8" stroke-width="4"/>
+    <path d="M591 258H646L635 234H604L591 246V258Z" stroke="#7DD3FC" stroke-width="4" stroke-linejoin="round"/>
+    <circle cx="607" cy="266" r="7" fill="#7DD3FC"/>
+    <circle cx="631" cy="266" r="7" fill="#7DD3FC"/>
+    <text x="618" y="315" text-anchor="middle" fill="#F8FAFC" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="18" font-weight="700">Ruta</text>
+  </g>
+
+  <g>
+    <circle cx="852" cy="116" r="34" fill="#0B1220" stroke="#22C55E" stroke-width="4"/>
+    <path d="M852 94C840 94 830 104 830 116C830 134 852 152 852 152C852 152 874 134 874 116C874 104 864 94 852 94Z" stroke="#86EFAC" stroke-width="4" stroke-linejoin="round"/>
+    <circle cx="852" cy="116" r="6" fill="#86EFAC"/>
+    <text x="852" y="171" text-anchor="middle" fill="#F8FAFC" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="18" font-weight="700">Punto</text>
+  </g>
+
+  <g>
+    <circle cx="1054" cy="186" r="34" fill="#0B1220" stroke="#F59E0B" stroke-width="4"/>
+    <path d="M1032 194H1076M1039 182H1069M1048 170H1060" stroke="#FCD34D" stroke-width="4" stroke-linecap="round"/>
+    <text x="1054" y="241" text-anchor="middle" fill="#F8FAFC" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="18" font-weight="700">Entrega</text>
+  </g>
+
+  <g opacity="0.96">
+    <rect x="910" y="246" width="176" height="98" rx="18" fill="#0B1220" stroke="#1D4ED8" stroke-opacity="0.5"/>
+    <text x="940" y="278" fill="#F8FAFC" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="17" font-weight="700">Control en tiempo real</text>
+    <text x="940" y="304" fill="#94A3B8" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="14">Lotes, ubicación y eventos</text>
+    <rect x="940" y="318" width="118" height="8" rx="4" fill="#1E293B"/>
+    <rect x="940" y="318" width="90" height="8" rx="4" fill="#22C55E"/>
+    <circle cx="1085" cy="278" r="11" fill="#22C55E"/>
+  </g>
+
+  <g opacity="0.9">
+    <rect x="86" y="82" width="146" height="84" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="108" y="113" fill="#F8FAFC" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="16" font-weight="700">Lote</text>
+    <text x="108" y="138" fill="#94A3B8" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="22" font-weight="800">TS-240315</text>
+    <text x="108" y="160" fill="#F59E0B" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="13" font-weight="700">Verificado</text>
+  </g>
+
+  <g opacity="0.12">
+    <circle cx="1092" cy="74" r="72" fill="#F59E0B"/>
+    <circle cx="1150" cy="332" r="52" fill="#1D4ED8"/>
+    <circle cx="736" cy="338" r="34" fill="#22C55E"/>
+  </g>
+</svg>
