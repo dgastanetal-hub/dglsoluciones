@@ -238,8 +238,23 @@ h2 {
   color: var(--gold-light); font-size: 0.73rem; font-weight: 600;
   padding: 4px 11px; border-radius: 999px;
 }
-.svc-img { border-radius: 12px; overflow: hidden; height: 210px; }
-.svc-img img { width: 100%; height: 100%; object-fit: cover; }
+.svc-img {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(13,17,23,0.92), rgba(30,38,55,0.9));
+  padding: 10px;
+}
+.svc-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
 
 /* WHY */
 .why { background: var(--dark2); }
@@ -275,13 +290,25 @@ h2 {
 .clients { background: var(--dark); }
 .cli-top { text-align: center; margin-bottom: 52px; }
 .cli-top .sub { margin: 12px auto 0; max-width: 480px; }
-.cli-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+.cli-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
 .cli-card {
   background: var(--dark2); border: 1px solid var(--border);
   border-radius: var(--radius); padding: 26px 18px; text-align: center;
   transition: border-color 0.25s, transform 0.25s;
 }
 .cli-card:hover { border-color: rgba(59,130,246,0.3); transform: translateY(-3px); }
+.cli-photo {
+  width: 100%;
+  height: 110px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background: #fff;
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
 .cli-ico {
   width: 42px; height: 42px; border-radius: 11px; margin: 0 auto 13px;
   background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.18);
@@ -645,7 +672,7 @@ select:focus-visible {
         </div>
       </div>
       <div class="svc-img">
-        <img src="Trazabilidad.jpg" alt="Trazabilidad logística" loading="lazy">
+        <img src="trazabilidad.jpeg" alt="Trazabilidad logística" loading="lazy">
       </div>
     </div>
 
@@ -710,27 +737,32 @@ select:focus-visible {
   </div>
   <div class="cli-grid">
     <div class="cli-card reveal">
-      <div class="cli-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg></div>
+      <img class="cli-photo" src="don-italo.png" alt="Don Ítalo" loading="lazy">
       <div class="cli-n">Don Ítalo</div>
       <div class="cli-p">Sistema informático para mejorar la gestión logística de la empresa</div>
     </div>
     <div class="cli-card reveal" style="transition-delay:0.08s">
-      <div class="cli-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z"/></svg></div>
+      <img class="cli-photo" src="freshmart.jpeg" alt="Freshmart" loading="lazy">
       <div class="cli-n">Freshmart</div>
-      <div class="cli-p">Diseño de red logística para salida en vivo del negocio</div>
+      <div class="cli-p">Diseño de red logística para salida en vivo del negocio.</div>
     </div>
     <div class="cli-card reveal" style="transition-delay:0.16s">
-      <div class="cli-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3"/></svg></div>
+      <img class="cli-photo" src="travelcab.png" alt="Travelcab" loading="lazy">
+      <div class="cli-n">Travelcab</div>
+      <div class="cli-p">Optimización operativa y de servicio para experiencias de traslado más ágiles y confiables.</div>
+    </div>
+    <div class="cli-card reveal" style="transition-delay:0.24s">
+      <img class="cli-photo" src="terrasur.jpg" alt="Abonos Terrasur" loading="lazy">
       <div class="cli-n">Abonos Terrasur</div>
       <div class="cli-p">Diagnóstico Lean Manufacturing y mejora continua</div>
     </div>
-    <div class="cli-card reveal" style="transition-delay:0.24s">
-      <div class="cli-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0H3"/></svg></div>
+    <div class="cli-card reveal" style="transition-delay:0.32s">
+      <img class="cli-photo" src="sistemas-analiticos.png" alt="Sistemas Analíticos" loading="lazy">
       <div class="cli-n">Sistemas Analíticos</div>
       <div class="cli-p">Mejora en planificación de rutas en Lima Metropolitana</div>
     </div>
-    <div class="cli-card reveal" style="transition-delay:0.32s">
-      <div class="cli-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/></svg></div>
+    <div class="cli-card reveal" style="transition-delay:0.40s">
+      <img class="cli-photo" src="ysamar.jpg" alt="Operador Logístico Ysamar" loading="lazy">
       <div class="cli-n">Op. Log. Ysamar</div>
       <div class="cli-p">Nuevo esquema tarifario para servicios de transporte de carga</div>
     </div>
